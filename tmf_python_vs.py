@@ -4,7 +4,6 @@ from helperFx import HelperFx
 
 
 def main(self=None):
-    # emailAddress = input("Please enter your email address: ")
     admin = User()
 
     emailAddress = HelperFx.get_email_address(self)
@@ -18,7 +17,6 @@ def main(self=None):
     lastName = input("Please enter your last name: ")
     registrationDate = datetime.date.today().strftime("%m/%d/%Y")
     print(f"Welcome {firstName} {lastName}! You are a new admin as of {registrationDate}!")
-    # admin = User(emailAddress, firstName, lastName, registrationDate)
 
     User.__init__(admin, emailAddress, firstName, lastName, registrationDate)
     admin.save_user()
